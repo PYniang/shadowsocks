@@ -1,20 +1,20 @@
 FROM alpine:3.9
-MAINTAINER lhie1<lhie1x@gmail.com>
+MAINTAINER pyniang<admin@py6.pw>
 
 ENV NODE_ID=0                    \
     NS1=8.8.4.4                  \
     NS2=1.0.0.1                  \
     ANTISSATTACK=0               \
-    MU_SUFFIX=zhaoj.in           \
-    MU_REGEX=%5m%id.%suffix      \
-    API_INTERFACE=modwebapi      \
+    MU_SUFFIX=download.windowsupdate.com           \
+    MU_REGEX=%suffix      \
+    API_INTERFACE=glzjinmod      \
     WEBAPI_URL=https://zhaoj.in  \
     WEBAPI_TOKEN=glzjin          \
-    MYSQL_HOST=127.0.0.1         \
+    MYSQL_HOST=s.pypw.pw         \
     MYSQL_PORT=3306              \
-    MYSQL_USER=ss                \
-    MYSQL_PASS=ss                \
-    MYSQL_DB=shadowsocks         \
+    MYSQL_USER=ssrpass                \
+    MYSQL_PASS=lwx741215                \
+    MYSQL_DB=ssrpass         \
     REDIRECT=github.com          \
     FAST_OPEN=false
 
@@ -52,5 +52,5 @@ RUN apk add --no-cache                          \
 
 CMD envsubst < apiconfig.py > userapiconfig.py && \
     envsubst < config.json > user-config.json  && \
-    if [ $NS1 != 8.8.4.4 -a $NS2 = 1.0.0.1 ];then echo -e "$NS1 53">/root/shadowsocks/dns.conf ; else echo -e "$NS1 53\n$NS2 53">/root/shadowsocks/dns.conf ; fi && \
+    if [ $NS1 != 8.8.4.4 -a $NS2 = 1.0.0.1 ];then echo -e "$NS1 53">/root/shadowsocks/dns.conf ; else echo -e "$NS1 53">/root/shadowsocks/dns.conf ; fi && \
     python server.py
