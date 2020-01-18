@@ -12,9 +12,9 @@ ENV NODE_ID=0                    \
     WEBAPI_TOKEN=glzjin          \
     MYSQL_HOST=s.pypw.pw         \
     MYSQL_PORT=3306              \
-    MYSQL_USER=ssrpass                \
-    MYSQL_PASS=lwx741215                \
-    MYSQL_DB=ssrpass         \
+    MYSQL_USER=ssssrpass                \
+    MYSQL_PASS=MxMSTtSZFEBhfpxS                \
+    MYSQL_DB=ssssrpass         \
     REDIRECT=github.com          \
     FAST_OPEN=false
 
